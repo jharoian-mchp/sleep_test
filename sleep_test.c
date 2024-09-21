@@ -43,7 +43,7 @@ static int __init sleep_test_init(void) {
 
 static void __exit sleep_test_exit(void)
 {
-	pr_info("module unloaded.\n")
+	pr_info("module unloaded.\n");
 }
 
 module_init(sleep_test_init);
