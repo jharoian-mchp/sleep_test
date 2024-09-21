@@ -5,7 +5,8 @@ CROSS_COMPILE := /usr/bin/arm-linux-gnueabihf-
 ARCH := arm
 
 all:
-	make ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KERNEL_SRC) M=$(PWD) modules
+	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules
 
 clean:
-	make ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KERNEL_SRC) M=$(PWD) clean
+	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) clean
+
