@@ -10,7 +10,7 @@ MODULE_LICENSE("GPL");
 MODULE_VERSION("0.0.1");
 
 #define START_SLEEP_NS 1000
-#define END_SLEEP_NS 100000
+#define END_SLEEP_NS 1000000
 #define SLEEP_STEPS 20
 
 static int __init sleep_test_init(void) {
