@@ -6,8 +6,8 @@
 
 MODULE_AUTHOR("Gertjan Hofman (gertjan.hofman@honeywell.com");
 MODULE_DESCRIPTION("Kernel Sleep test");
-MODULE_LICENSE("GPL")
-MODULE_VERSION("0.0.1")
+MODULE_LICENSE("GPL");
+MODULE_VERSION("0.0.1");
 
 #define START_SLEEP_NS 1000
 #define END_SLEEP_NS 100000
