@@ -4,6 +4,11 @@
 #include <linux/ktime.h>
 #include <linux/delay.h>
 
+MODULE_AUTHOR("Gertjan Hofman (gertjan.hofman@honeywell.com");
+MODULE_DESCRIPTION("Kernel Sleep test");
+MODULE_LICENSE("GPL")
+MODULE_VERSION("0.0.1")
+
 #define START_SLEEP_NS 1000
 #define END_SLEEP_NS 100000
 #define SLEEP_STEPS 20
@@ -35,3 +40,12 @@ static int __init sleep_test_init(void) {
 
     return 0;
 }
+
+static void __exit sleep_test_exit(void)
+{
+	pr_info("module unloaded.\n")
+}
+
+module_init(sleep_test_init);
+module_exit(sleep_test_exit);
+
